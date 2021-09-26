@@ -1,15 +1,19 @@
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
-import ViewAll from '../ViewHero/ViewAll';
-import ViewHeroById from '../ViewHero/ViewHeroById';
+import { CssBaseline } from '@material-ui/core';
+import Header from '../../component/Header';
+import HomePageRoute from './HomePageRoute';
 
 const HomePage = () => {
-  const routes = (
-    <Switch>
-      <Route path="/:id" component={ViewHeroById} />
-      <Route path="/" component={ViewAll} />
-    </Switch>
+  return (
+    <>
+      <CssBaseline />
+      <Header />
+      <main>
+        <div>
+          <HomePageRoute />
+        </div>
+      </main>
+    </>
   );
-  return <BrowserRouter>{routes}</BrowserRouter>;
 };
 
 export default HomePage;
