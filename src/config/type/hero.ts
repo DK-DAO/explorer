@@ -11,4 +11,5 @@ export interface IHero {
   attackRange: string;
   rate: number;
   role: string;
+  [x: string]: string | number;
 }
