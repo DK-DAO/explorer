@@ -8,3 +8,9 @@ export const underscoreToCapitalizeWithSpace = (text: string) => {
     return s.toUpperCase().replace('_', ' ');
   });
 };
+
+export const underscoreToCamelCase = (text: string) => {
+  return text.replace(/_([a-z])/g, (s) => {
+    return s[1].toUpperCase();
+  });
+};
