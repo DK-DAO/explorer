@@ -10,7 +10,7 @@ const heroApi = {
   },
   viewHeroById: (nftTokenId: string) => {
     const url = `${APP_API}/token/${nftTokenId} `;
-    return axiosClient.get<IReponseRecord<IHeroDetails>>(url);
+    return axiosClient.get<IHeroDetails>(url);
   },
 };
 

@@ -25,7 +25,7 @@ const ViewAll = () => {
 
   return (
     <>
-      <TitlePage text="All Heroes" />
+      <TitlePage text="All Cards" />
       <Container className={classes.cardList}>
         <Grid container spacing={4}>
           {heroList.map((hero) => (

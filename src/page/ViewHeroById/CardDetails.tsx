@@ -6,11 +6,11 @@ import {
   Typography,
 } from '@material-ui/core';
 import { FC } from 'react';
-import { IHeroCardList } from '../../config/type/hero';
+import { IHeroDetails } from '../../config/type/hero';
 import { camelCaseToPascalCaseWithSpace } from '../../helper/ultil/textTransform';
 
-export interface IHeroCardProps {
-  hero: IHeroCardList;
+interface ICardDetailsProp {
+  hero: IHeroDetails;
 }
 
 const useStyle = makeStyles(() => ({
@@ -26,10 +26,9 @@ const useStyle = makeStyles(() => ({
   },
 }));
 
-const HeroCardList: FC<IHeroCardProps> = (props) => {
+const CardDetails: FC<ICardDetailsProp> = ({ hero }) => {
   const classes = useStyle();
-  const { name, image, ...heroDetails } = props.hero;
-
+  const { name, image, attributes, ...heroDetails } = hero;
   return (
     <Card className={classes.card}>
       <CardMedia image={image} className={classes.cardMedia} component="img" />
@@ -48,9 +47,17 @@ const HeroCardList: FC<IHeroCardProps> = (props) => {
             </Typography>
           );
         })}
+        {attributes.map((item) => {
+          return (
+            <Typography key={item.value}>
+              <span className={classes.cardDetails}> {item.traitType}</span>:{' '}
+              {item.value}
+            </Typography>
+          );
+        })}
       </CardContent>
     </Card>
   );
 };
 
-export default HeroCardList;
+export default CardDetails;
