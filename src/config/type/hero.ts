@@ -1,8 +1,11 @@
 export interface IHero {
   image: string;
-  cardId: number;
   name: string;
   description: string;
+}
+
+export interface IHeroCardList extends IHero {
+  cardId: number;
   rareness: number;
   rarenessName: string;
   type: string;
@@ -11,5 +14,20 @@ export interface IHero {
   attackRange: string;
   rate: number;
   role: string;
-  [x: string]: string | number;
+}
+
+export interface IAttributes {
+  traitType: string;
+  value: string;
+  displayType?: number;
+}
+
+export interface IHeroDetails {
+  name: string;
+  description: string;
+  image: string;
+  externalLink: string;
+  sellerFeeBasisPoints: number;
+  feeRecipient: string;
+  attributes: IAttributes[];
 }
