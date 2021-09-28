@@ -4,13 +4,13 @@ import { IRecordList, IReponseRecord } from '../../config/type/response';
 import axiosClient from './axiosClient';
 
 const heroApi = {
-  viewAllHero: (): Promise<IReponseRecord<IRecordList<IHeroCardList>>> => {
+  viewAllHero: () => {
     const url = `${APP_API}/token`;
-    return axiosClient.get(url);
+    return axiosClient.get<IReponseRecord<IRecordList<IHeroCardList>>>(url);
   },
-  viewHeroById: (nftTokenId: string): Promise<IReponseRecord<IHeroDetails>> => {
+  viewHeroById: (nftTokenId: string) => {
     const url = `${APP_API}/token/${nftTokenId} `;
-    return axiosClient.get(url);
+    return axiosClient.get<IReponseRecord<IHeroDetails>>(url);
   },
 };
 

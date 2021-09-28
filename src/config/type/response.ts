@@ -1,6 +1,4 @@
-import { AxiosResponse } from 'axios';
-
-export interface IReponseRecord<T> extends AxiosResponse {
+export interface IReponseRecord<T> {
   success: boolean;
   result: T;
 }

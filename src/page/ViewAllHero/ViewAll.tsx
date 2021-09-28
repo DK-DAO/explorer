@@ -18,7 +18,7 @@ const ViewAll = () => {
   useEffect(() => {
     const getAllHero = async () => {
       const response = await heroApi.viewAllHero();
-      setHeroList(response.result.records);
+      setHeroList(response.data.result.records);
     };
     getAllHero();
   }, []);
@@ -27,13 +27,13 @@ const ViewAll = () => {
     <>
       <TitlePage text="All Heroes" />
       <Container className={classes.cardList}>
-        {heroList.map((hero) => (
-          <Grid container spacing={4} key={hero.cardId}>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
+        <Grid container spacing={4}>
+          {heroList.map((hero) => (
+            <Grid item key={hero.cardId} xs={12} sm={6} md={4} lg={3}>
               <HeroCardList hero={hero} />
             </Grid>
-          </Grid>
-        ))}
+          ))}
+        </Grid>
       </Container>
     </>
   );
