@@ -1,4 +1,4 @@
-export const camelCaseToPascalCase = (text: string) => {
+export const camelCaseToPascalCaseWithSpace = (text: string) => {
   const newText = text.replace(/([A-Z])/g, ' $1');
   return newText.charAt(0).toUpperCase() + newText.slice(1);
 };
