@@ -1,5 +1,4 @@
 import { AppBar, makeStyles, Toolbar, Typography } from '@material-ui/core';
-import { PhotoCamera } from '@mui/icons-material';
 import logoIcon from '../asset/image/logo.png';
 
 const useStyle = makeStyles((theme) => ({
@@ -13,7 +12,7 @@ const Header = () => {
   const classes = useStyle();
   return (
     <>
-      <AppBar position="sticky">
+      <AppBar position="sticky" color="primary">
         <Toolbar>
           <img src={logoIcon} alt="DKDAO Logo" className={classes.logo} />
           <Typography variant="h6">DKDAO</Typography>
