@@ -1,22 +1,17 @@
-import { AppBar, Toolbar, Typography } from '@mui/material';
-import { makeStyles } from '@material-ui/core';
-
+import { AppBar, Toolbar, Typography, styled } from '@mui/material';
 import logoIcon from '../asset/image/logo.png';
 
-const useStyle = makeStyles((theme) => ({
-  logo: {
-    marginRight: theme.spacing(1),
-    width: '50px',
-  },
+const StyledImage = styled('img')(({ theme }) => ({
+  marginRight: theme.spacing(1),
+  width: '50px',
 }));
 
 const Header = () => {
-  const classes = useStyle();
   return (
     <>
       <AppBar position="sticky" color="primary">
         <Toolbar>
-          <img src={logoIcon} alt="DKDAO Logo" className={classes.logo} />
+          <StyledImage src={logoIcon} />
           <Typography variant="h6">DKDAO</Typography>
         </Toolbar>
       </AppBar>

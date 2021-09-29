@@ -1,5 +1,5 @@
+import { createTheme, ThemeProvider } from '@mui/material';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import HomePage from './page/HomePage/Home';
 
