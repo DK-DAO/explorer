@@ -1,6 +1,16 @@
-const camelCaseToPascalCase = (text: string) => {
+export const camelCaseToPascalCaseWithSpace = (text: string) => {
   const newText = text.replace(/([A-Z])/g, ' $1');
   return newText.charAt(0).toUpperCase() + newText.slice(1);
 };
 
-export default camelCaseToPascalCase;
+export const underscoreToCapitalizeWithSpace = (text: string) => {
+  return text.replace(/(?:_| |\b)(\w)/g, (s) => {
+    return s.toUpperCase().replace('_', ' ');
+  });
+};
+
+export const underscoreToCamelCase = (text: string) => {
+  return text.replace(/_([a-z])/g, (s) => {
+    return s[1].toUpperCase();
+  });
+};

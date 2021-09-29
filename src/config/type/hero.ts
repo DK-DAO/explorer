@@ -1,7 +1,7 @@
 export interface IHero {
-  image: string;
-  name: string;
-  description: string;
+  image?: string;
+  name?: string;
+  description?: string;
 }
 
 export interface IHeroCardList extends IHero {
@@ -17,17 +17,19 @@ export interface IHeroCardList extends IHero {
 }
 
 export interface IAttributes {
-  traitType: string;
-  value: string;
+  traitType?: string;
+  value?: string;
   displayType?: number;
 }
 
-export interface IHeroDetails {
-  name: string;
-  description: string;
-  image: string;
-  externalLink: string;
-  sellerFeeBasisPoints: number;
-  feeRecipient: string;
+export interface IHeroExtra {
+  externalLink?: string;
+  sellerFeeBasisPoints?: number;
+  feeRecipient?: string;
+}
+
+export interface IHeroInfo extends IHero, IHeroExtra {}
+
+export interface IHeroDetails extends IHeroInfo {
   attributes: IAttributes[];
 }

@@ -1,5 +1,6 @@
-import { Container, Grid, makeStyles } from '@material-ui/core';
 import { useEffect, useState } from 'react';
+import { makeStyles } from '@material-ui/core';
+import { Container, Grid } from '@mui/material';
 import HeroCardList from './HeroCardList';
 import TitlePage from '../../component/TitlePage';
 import { IHeroCardList } from '../../config/type/hero';
@@ -25,7 +26,7 @@ const ViewAll = () => {
 
   return (
     <>
-      <TitlePage text="All Heroes" />
+      <TitlePage text="All Cards" />
       <Container className={classes.cardList}>
         <Grid container spacing={4}>
           {heroList.map((hero) => (

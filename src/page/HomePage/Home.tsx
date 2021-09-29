@@ -1,4 +1,4 @@
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline } from '@mui/material';
 import Header from '../../component/Header';
 import HomePageRoute from './HomePageRoute';
 

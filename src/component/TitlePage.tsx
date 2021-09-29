@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { Container, makeStyles, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
+import { Container, Typography } from '@mui/material';
 
 interface ITitlePage {
   text: string;
