@@ -1,5 +1,6 @@
-import { Container, Grid, makeStyles } from '@material-ui/core';
 import { useEffect, useState } from 'react';
+import { makeStyles } from '@material-ui/core';
+import { Container, Grid } from '@mui/material';
 import HeroCardList from './HeroCardList';
 import TitlePage from '../../component/TitlePage';
 import { IHeroCardList } from '../../config/type/hero';

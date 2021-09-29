@@ -1,4 +1,6 @@
-import { AppBar, makeStyles, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Typography } from '@mui/material';
+import { makeStyles } from '@material-ui/core';
+
 import logoIcon from '../asset/image/logo.png';
 
 const useStyle = makeStyles((theme) => ({

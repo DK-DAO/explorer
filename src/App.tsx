@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { createTheme } from '@mui/material/styles';
-import { ThemeProvider } from '@material-ui/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import HomePage from './page/HomePage/Home';
 
@@ -20,9 +19,9 @@ const App = () => {
   );
 
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>{routes}</ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>{routes}</BrowserRouter>
+    </ThemeProvider>
   );
 };
 

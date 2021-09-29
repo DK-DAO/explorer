@@ -1,10 +1,5 @@
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  makeStyles,
-  Typography,
-} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { FC } from 'react';
 import { IHeroDetails } from '../../config/type/hero';
 import { camelCaseToPascalCaseWithSpace } from '../../helper/ultil/textTransform';
