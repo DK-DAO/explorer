@@ -1,25 +1,21 @@
 import { FC } from 'react';
-import { makeStyles } from '@material-ui/core';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, styled } from '@mui/material';
 
 interface ITitlePage {
   text: string;
 }
 
-const useStyle = makeStyles((theme) => ({
-  container: {
-    padding: theme.spacing(3, 1, 2, 1),
-  },
+const StyledContainer = styled(Container)(({ theme }) => ({
+  padding: theme.spacing(3, 1, 2, 1),
 }));
 
 const TitlePage: FC<ITitlePage> = ({ text }) => {
-  const classes = useStyle();
   return (
-    <Container maxWidth="sm" className={classes.container}>
+    <StyledContainer maxWidth="sm">
       <Typography variant="h3" align="center" color="textPrimary" gutterBottom>
         {text}
       </Typography>
-    </Container>
+    </StyledContainer>
   );
 };
 

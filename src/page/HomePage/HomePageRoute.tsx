@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import ViewAll from '../ViewAllHero/ViewAll';
 import ViewHeroById from '../ViewHeroById/ViewHeroById';
 
@@ -10,7 +10,7 @@ const HomePageRoute = () => {
       <Redirect to="/view" />
     </Switch>
   );
-  return <BrowserRouter>{routes}</BrowserRouter>;
+  return <Switch>{routes}</Switch>;
 };
 
 export default HomePageRoute;

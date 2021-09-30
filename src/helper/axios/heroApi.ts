@@ -5,7 +5,7 @@ import axiosClient from './axiosClient';
 
 const heroApi = {
   viewAllHero: () => {
-    const url = `${APP_API}/token`;
+    const url = `${APP_API}/token/`;
     return axiosClient.get<IReponseRecord<IRecordList<IHeroCardList>>>(url);
   },
   viewHeroById: (nftTokenId: string) => {
